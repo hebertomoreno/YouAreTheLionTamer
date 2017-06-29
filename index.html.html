@@ -1,0 +1,191 @@
+<tw-storydata name="You Are The Lion Tamer" startnode="6" creator="Twine" creator-version="2.1.3" ifid="2E23C24D-727C-451F-A0EC-016E087F2DD5" format="Harlowe" format-version="2.0.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+</script><tw-passagedata pid="1" name="You are the Lion Tamer" tags="" position="539,175">(if: $hungup is 0)[###And still you sit in a cubicle.
+It&#x27;s not bad. It is a spacious cubicle.
+**You do not feel caged.** 
+]
+(if: $hungup is 1)[###Welcome back.
+The number of that person who called you is safely stored in your VoIP phone. 
+
+Yippity yep. 
+
+Definitely.]
+
+There are post-it notes on the walls of your cubicle. 
+(if: $rings &lt;=3 and $hungup is 0)[A VoIP phone sits to your right, ringing.] 
+There&#x27;s a calendar to your left, telling you how many working days are left in the month. 
+There&#x27;s an excel spreadsheet showing on your left monitor. 
+[[Read the post-it notes]]
+(if: $rings &lt;=3 and $hungup is 0)[ [[Answer the phone]] ]
+(else:)[ [[Pick up the phone]] ]
+[[Check how many working days are left in the month]]
+[[Fix some excel reports]]</tw-passagedata><tw-passagedata pid="2" name="Read the post-it notes" tags="" position="319,146">(set: $rings to $rings+1)
+####You center your attention on the post-it notes. 
+One of the post-it notes reads:
+
+//&quot;Meeting today at 1:00 PM!! :) ;)&quot;//
+
+(if: $rings &lt;=3)[The phone is still ringing.]
+
+[[Read another post-it note]]
+(if: $rings &lt;=3)[ [[Answer the phone]] ]
+[[Check how many working days are left in the month]] </tw-passagedata><tw-passagedata pid="3" name="Answer the phone" tags="" position="584,378">(if: $rings &lt;= 2)[You answer the phone with a calm, cheery voice. &lt;br&gt; //&quot;Thank you for calling Digisense. How may I help you?&quot;//
+//&quot;Yes umm hi. Thank you for taking my call. I&#x27;ve been trying to reach you forever but your phone menu is gargantuan&quot;//
+//&quot;Sorry about that. What can I do for you today?&quot;//
+//&quot;Yes umm thank you. I was told I could reach the sales department through here.&quot;//
+//&quot;Definitely. Let me just transfer you over to a sales engineer.&quot;//
+You hear something drop on the other side of the line. A lot of somethings. Not precisely the sound that dishes and pots and pans make while hitting the floor, but a long chain of almost rhythmical thuds one after the other. 
+//&quot;No! Wait...&quot;//
+[[She]] ends the sentence with a linger although she made a statement and not a question.
+
+[[Ask what the problem is.]]
+[[Transfer them to sales-&gt;Transfer her to sales]]
+]
+(if: $rings &gt; 2)[You answer the phone with a calm, cheery voice. &lt;br&gt; //&quot;Thank you for calling Digisense. How may I help you?&quot;//
+You hear machines on the other side of the line. You hear pistons and dropped heavy //things//. People shouting. Not screaming. Then you hear screaming.
+[[Hang up-&gt;Hang up the future]]
+[[Continue listening]]
+]</tw-passagedata><tw-passagedata pid="4" name="Check how many working days are left in the month" tags="" position="804,159">(set: $rings to $rings+1)
+A lot. 
+
+(if: $rings &lt;=3)[The phone keeps ringing.]
+
+[[How many exactly?]]
+(if: $rings &lt;=3)[[[Answer the phone.-&gt;Answer the phone]]]</tw-passagedata><tw-passagedata pid="5" name="Read another post-it note" tags="" position="209,172">(set: $rings to $rings+1)
+####You read another post-it note. 
+It reads:
+
+//&quot;The first step to every journey is an easy one!! XD XD XD&quot;//
+
+(if: $rings &lt;=3)[The phone is still ringing.]
+
+[[Read ANOTHER post-it note]]
+(if: $rings &lt;=3)[ [[Answer the phone]] ]</tw-passagedata><tw-passagedata pid="6" name="init" tags="" position="485,0">(set: $rings to 0)
+(set: $hungup to 0)
+##[[You Are The Lion Tamer-&gt;You are the Lion Tamer]]</tw-passagedata><tw-passagedata pid="7" name="Ask what the problem is." tags="" position="1295,455">(set: $rings to 4)
+//&quot;Is everything ok?&quot;//&lt;br&gt;
+You ask this even though you know this call is suspicious and it is suspicious particularly because you usually do not get any suspicious calls on this line. This is your work phone. It is sacred nine-to-five paraphernalia.&lt;br&gt;
+//&quot;I just...I need...&quot;//&lt;br&gt;
+[[What do you need?]]
+[[Hang up]]
+[[Transfer her to sales]]</tw-passagedata><tw-passagedata pid="8" name="How many exactly?" tags="" position="927,192">(set: $rings to $rings+1)
+At least 20. 
+But after that is over and done with, there is another month. And then another one after that. Months are endless. 
+And months turn into years and years turn into dead friends and wives and new bridges and old cars and pages upon pages upon pages of legally binding documents &#x27;&#x27;all&#x27;&#x27; of which have your signature on them. And most of those days are working days because you spent your vacation time on that one trip to Bali from which you brought along a rare disease and had to be quarantined for a month. 
+
+Vacation time is your new currency. 
+
+Your co-workers all know. They can tell you can tell. Your boss looks over from your cubicle to see what you&#x27;re doing. 
+
+You&#x27;re just checking your calendar. That&#x27;s all. 
+
+(if: $rings &lt;=3)[The phone keeps ringing.]
+
+[[Check my calendar some more]]
+(if: $rings &lt;=3)[[[Answer the phone.-&gt;Answer the phone]]]</tw-passagedata><tw-passagedata pid="9" name="What do you need?" tags="" position="1479,349">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="Hang up" tags="" position="1267,292">You hang up the phone. Well done. Who needs her? 
+Since this is the future, her number is still recorded on your phone in case you want to call her back. Just a thought. In case you were feeling adventurous. This is your call (literally ha ha). 
+(set: $hungup to 1)
+[[Return to my day to day stuff/things.-&gt;You are the Lion Tamer]]</tw-passagedata><tw-passagedata pid="11" name="Transfer her to sales" tags="" position="749,524">(set: $rings to 4)
+You nervously dial the extension of that guy you know in sales and hang up. 
+Your life returns to normal, but if you ever want to call that person again, their number is stored safely in your phone&#x27;s received calls. 
+
+Forever, probably. You could probably just call them back at any given time, if you felt so inclined to. Just saying, it would be //pretty// easy. 
+
+[[Pick up the phone]]</tw-passagedata><tw-passagedata pid="12" name="Read ANOTHER post-it note" tags="" position="99,188">(set: $rings to $rings+1)
+####You read another post-it note. 
+This is what it says: &lt;br&gt;
+//&quot;Look down!! :O !!&quot;//
+(if: $rings &lt;=3)[The phone is still ringing.]
+[[Obey the note. The note is chief. The note is key, I can feel it.-&gt;Obey the note]]
+(if: $rings &lt;=3)[ [[Answer the phone]] ]</tw-passagedata><tw-passagedata pid="13" name="Fix some excel reports" tags="" position="795,0">(set: $rings to $rings+1)
+####&#x60;*Click Click*&#x60;
+####&#x60;*Click Click Click*&#x60;
+
+###Done
+
+(if: $rings &lt;=3 and $hungup is 0)[The phone keeps ringing.]
+
+[[What did I do?]]
+(if: $rings &lt;=3 and $hungup is 0)[ [[Answer the phone]] ]</tw-passagedata><tw-passagedata pid="14" name="Obey the note" tags="" position="130,444">(set: $rings to $rings+1)
+You look down. Congratulations. 
+It&#x27;s your crotch.
+You genius.
+You brilliant scientist, you. 
+Nobel fucking prize material. 
+
+(if: $rings &lt;=3)[The phone is still ringing, by the way.]
+
+(else:)[The phone has obviously stopped ringing.]
+
+[[Look inside my crotch]]
+[[Feel bad about myself]]</tw-passagedata><tw-passagedata pid="15" name="Look inside my crotch" tags="" position="107,653">#Excuse Me?
+[[You read what I said]]
+[[Excuse ME]]</tw-passagedata><tw-passagedata pid="16" name="Feel bad about myself" tags="" position="350,417">Good. 
+I think we are all done with that little experiment. Let us put that all behind us. Here we go, a new day.
+
+You succesfully look up and lo and behold, there is a new e-mail waiting for you. Joy! </tw-passagedata><tw-passagedata pid="17" name="You read what I said" tags="" position="235,590">I know what you said, I&#x27;m just not sure of what you //mean//.
+Are you saying that you want to open up and //ouroborously// go inside your own crotch? Are you aware of the horror? The terror? How unhygienic that sounds? Is? 
+[[I am well aware of the circumstances and consequences of the actions I want to take.-&gt;go inside crotch]]
+[[I have reflected upon my words and now realize how absurd I have been as a person, a worker and a friend. -&gt;reflect upon my actions]]
+</tw-passagedata><tw-passagedata pid="18" name="Excuse ME" tags="" position="201,796">You are excused. 
+
+Guess what. Hey. Guess what. 
+
+You have a new e-mail. Isn&#x27;t technology a wonderful thing? No one has to go into anyone&#x27;s crotch unless explicitly ordered to. And even then, there are exceptions. Don&#x27;t be goin&#x27; into no groins without constent, now. 
+
+I guess that is my point. 
+
+Anyway, yeah, new e-mail. Here we go.
+
+[[Read my new e-mail]]
+[[Do literally anything else]]</tw-passagedata><tw-passagedata pid="19" name="go inside crotch" tags="" position="365,601">##Suit yourself. 
+
+You fold yourself as far as you can go until your face is pressing against your groinal area. People are staring at you now. Maybe they have always been staring. 
+
+[[Cease this futile attempt at entering my crotch]]
+[[Insist. INSIST!]]</tw-passagedata><tw-passagedata pid="20" name="reflect upon my actions" tags="" position="370,731">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="Check my calendar some more" tags="" position="1066,251">The days you get paid are highlighted in yellow. The national holidays are highlighted in green. It&#x27;s June now. There are no national holidays until November. You get paid every other friday. 
+
+You have to pay rent this week.
+
+Your mother is in the hospital. 
+
+Your car has been making that weird noise like an old soup can filled with uncooked beans. 
+
+Long story short, hang in there, bud. 
+
+[[This is not helpful]]</tw-passagedata><tw-passagedata pid="22" name="What did I do?" tags="" position="925,20">(set: $rings to $rings+1)
+You finished that report!  
+
+Good for you! 
+
+[[I don&#x27;t feel anything.]] 
+(if: $rings &lt;=3 and $hungup is 0)[The phone keeps ringing.]</tw-passagedata><tw-passagedata pid="23" name="I don&#x27;t feel anything." tags="" position="1055,43">Such is life. 
+
+[[Return to my day to day stuff/things.-&gt;You are the Lion Tamer]]</tw-passagedata><tw-passagedata pid="24" name="Hang up the future" tags="" position="1063,637">You hang up the phone, weirded out. Clearly weirded out. </tw-passagedata><tw-passagedata pid="25" name="Continue listening" tags="" position="1232,625">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="Cease this futile attempt at entering my crotch" tags="" position="515,538">Thank Buddha. 
+
+But Uh-oh. 
+
+Here comes your Boss and he&#x27;s accompanied by the HR lady. Clearly your actions in the past have cast a shadow upon your abilities as a worker. You are probably perceived as &quot;in less than top shape&quot;, so to speak. 
+</tw-passagedata><tw-passagedata pid="27" name="Insist. INSIST!" tags="" position="542,679">Look, yo, this is just too much. Are you expecting something to happen? What could you possibly mean to achieve by mashing your face against your crotch, impressive flexibility notwithstanding? Is this a test of my patie-ooooooooooooooooooooOOOOOOOOOOOH SHIT WHAT THE FUCK IS HAPPENING THE COLORS THE FUCKING COLORS WHAT DID YOU DO WHAT DID YOU DO YOU MINSTREL YOU FUCK UP WHAT DID YOU DO DO NOT MESS WITH ME I WILL END YOU I WILL END YOUR EXISTENCE WITH A FUCKING KEY PRESS I PROMISE I W
+
+//Everything goes black.//
+
+You wake up standing in the middle of a forest clearing. There are no clouds in the sky. There is grass below you, and trees around you. There is a single door lying on the ground in front of you, about two yards away. It looks old, but not moldy. Just old. 
+
+Things are cool between us, as always. </tw-passagedata><tw-passagedata pid="28" name="Pick up the phone" tags="" position="959,756">Who do you want to call? 
+
+[[Your friend from sales]]
+[[The last number]] //(you know which one)//
+[[The Ghostbusters]]</tw-passagedata><tw-passagedata pid="29" name="This is not helpful" tags="" position="1194,138">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="30" name="The last number" tags="" position="1166,899">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="31" name="The Ghostbusters" tags="" position="956,911"></tw-passagedata><tw-passagedata pid="32" name="Your friend from sales" tags="" position="1133,767">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="Do literally anything else" tags="" position="239,966">Hey. Rude. 
+
+By the way, have you noticed something? I&#x27;m giving you a choice. Do you not feel privileged? Not everyone has a choice. Sometimes you //have// to check your e-mail. Sometimes you //have// to take a client to dinner. Sometimes you //will have// to miss your firstborn&#x27;s funeral if you want that big promotion. 
+
+But not here. No sir. I am a benevolent narrator. So please, choose what you want to do. 
+
+[[Read my new e-mail]]
+[[Pick up the phone]] 
+[[Check how many working days are left in the month]] 
+</tw-passagedata><tw-passagedata pid="34" name="Read my new e-mail" tags="" position="530,939">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+
